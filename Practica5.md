@@ -7,42 +7,51 @@
 #### Topologia 1
 > ![](/TOPO1%20P5/topologia.png)
 > Descripcion:
-> La topologia esta realizada para una empresa la cual tiene 3 departamentos
-> 1. Finanzas
-> 2. Ventas
-> 2. Informatica
+> La topologia cuenta con cuatro clientes, los cuales se conectan a dos switches,
+>    -cliente 1 y 2 a switch 1
+>    -cliente 3 y 4 a switch 2
 >
-> La parte de Finanzas consta de dos computadoras (VPC1,VPC2) que estan conectadas a un switch (SWITCH1)
-> este esta conectado a un router que sera al que todos los departamentos estan conectados.
+> Ambos switches van conectados a un ethernetswitch el cual se conecta al router que va
+> conectado a la nuve que interconectara ambas topologias.
 >
-> La parte de Ventas consta de tres computadoras (VPC3,VPC4,VPC5) que estan conectadas a un switch (SWITCH2)
-> este esta conectado a un router que sera al que todos los departamentos estan conectados.
 >
-> La parte de Informatica consta de una computadora (maquina virtual tinylinux) que esta conectada a un switch (SWITCH3)
-> este esta conectado a un router que sera al que todos los departamentos estan conectados.
 >
+## configuracion de etherswitch
+>
+>
+>
+> ![](/TOPO1%20P5/eter1.png)
+> ![](/TOPO1%20P5/eter.png)
 
+## configuracion de routers
+>
+>
+>
+> ![](/TOPO1%20P5/router1.png)
+## configuracion de switches
+>
+>
+>
+> ![](/TOPO1%20P5/switch.png)
+## configuracion de clientes
+>
+>
+>
+> ![](/TOPO1%20P5/cliente1.png)
+> ![](/TOPO1%20P5/cliente2.png)
+> ![](/TOPO1%20P5/tini.png)
 #### Topologia 2
 
 > ![](/TOPO%202%20P5/topo.png)
 
 > Descripcion:
-> La topologia esta realizada para una empresa la cual tiene 3 departamentos
-> 1. Finanzas
-> 2. Ventas
-> 2. Informatica
+> cuenta con dos clientes, ambos conectados a un switch
+>   -cliente1 a switch 4
+>   -cliente2 a switch 5
 >
-> La parte de Finanzas consta de dos computadoras (VPC1,VPC2) que estan conectadas a un switch (SWITCH1)
-> este esta conectado a un router que sera al que todos los departamentos estan conectados.
+> ambos switchs se conectan a un ethernet switch que se conecta a dos routers (3-4)
 >
-> La parte de Ventas consta de tres computadoras (VPC3,VPC4,VPC5) que estan conectadas a un switch (SWITCH2)
-> este esta conectado a un router que sera al que todos los departamentos estan conectados.
->
-> La parte de Informatica consta de una computadora (maquina virtual tinylinux) que esta conectada a un switch (SWITCH3)
-> este esta conectado a un router que sera al que todos los departamentos estan conectados.
->
-
-
+> luego estos dos routers se conectan al ultimo router de la topologia que va conectado a la nuve.
 
 
 # Manual de Comandos
