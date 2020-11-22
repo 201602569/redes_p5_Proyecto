@@ -48,20 +48,69 @@
 # Manual de Comandos
 
 #### Topologia 1
-
-
-
-
+>conf t 
+>int range f0/0 - 1
+>no shu
+>exit
+>
+>int f0/0.1
+>encapsulation dot1Q 20
+>ip address 192.168.10.254 255.255.255.0
+>exit
+>
+>int f0/0.2
+>encapsulation dot1Q 30
+>ip address 192.168.20.254 255.255.255.0
+>exit
+>
+>int f0/0.3
+>encapsulation dot1Q 40
+>ip address 192.168.30.254 255.255.255.0
+>exit
+>
+>int f0/0.4
+>encapsulation dot1Q 50
+>ip address 192.168.40.254 255.255.255.0
+>exit
+>
+>int f0/1.1
+>encapsulation dot1Q 20
+>ip address 192.168.10.254 255.255.255.0
+>exit
+>
+>int f0/1.2
+>encapsulation dot1Q 30
+>ip address 192.168.20.254 255.255.255.0
+>exit
+>
+>int f0/1.3
+>encapsulation dot1Q 40
+>ip address 192.168.30.254 255.255.255.0
+>exit
+>
+>int f0/1.4
+>encapsulation dot1Q 50
+>ip address 192.168.40.254 255.255.255.0
+>exit
+>
+>
+>
 #### Topologia 2
 >========================EIGRP=========================
 >
 >
 >------------------------R2----------------------------
+>
 >conf t
+>
 >router eigrp 10
+>
 >network 10.10.0.0 0.0.0.255
+>
 >network 20.10.0.0 0.0.0.255
+>
 >network 192.168.15.0 0.0.0.255
+>
 >end
 >
 >------------------------R3----------------------------
