@@ -18,25 +18,33 @@
 >
 ## configuracion de etherswitch
 >
+>en el etherswitch1 se configuran las vlans por medio de los comandos vlan # donde el numeral es el
+>numero de vlan correpondiente luego colocamos name "nombre" donde le colocamos nombre a las vlans
 >
+>
+>posteriormente configuramos los puertos de modo trunk
 >
 > ![](/TOPO1%20P5/eter1.png)
+>
 > ![](/TOPO1%20P5/eter.png)
 
 ## configuracion de routers
 >
->
+>Router 1
+>dentro del router 1 configuramos las diferentes subinterfaces por medio de los comandos 
+> int f#/#.# donde los primeros 2 numerales corresponden a los puertos y el ultimo a la vlan
+> luego configuramos las ip y las mascaras correspondientes
 >
 > ![](/TOPO1%20P5/router1.png)
 ## configuracion de switches
 >
->
+> para configurar los switchs utilizamos la misma configuracion en ambos
+> colocamos en modo dot1q el puerto 0
+> colocamos la vlan 20 al puerto1 y la vlan 50 al puerto 2
 >
 > ![](/TOPO1%20P5/switch.png)
 ## configuracion de clientes
->
->
->
+> para la configuracion de los clientes les asignaremos ip a cada uno y probaremos que sea necesario >el envio de paquetes entre ellas.
 > ![](/TOPO1%20P5/cliente1.png)
 > ![](/TOPO1%20P5/cliente2.png)
 > ![](/TOPO1%20P5/tini.png)
@@ -124,46 +132,72 @@
 >
 >------------------------R3----------------------------
 >conf t
+>
 >router eigrp 10
+>
 >network 10.10.0.0 0.0.0.255
+>
 >network 20.10.0.0 0.0.0.255
+>
 >network 192.168.15.0 0.0.0.255
+>
 >end
 >
 >------------------------R4----------------------------
+>
 >conf t
+>
 >router eigrp 10
+>
 >network 10.10.0.0 0.0.0.255
+>
 >network 20.10.0.0 0.0.0.255
+>
 >network 192.168.15.0 0.0.0.255
+>
 >end
 >
 >========================VRRP===========================
 >
 >------------------------R3----------------------------
 >conf t
+>
 >vrrp 10
+>
 >vrrp 10 ip 192.168.15.3
+>
 >vrrp 10 priority 120
+>
 >vrrp 10 preempt
+>
 >end
 >
 >------------------------R4----------------------------
 >conf t
+>
 >vrrp 10
+>
 >vrrp 10 ip 192.168.15.3
+>
 >vrrp 10 priority 100
+>
 >end
 >
 >========================INTERFACES===========================
+>
 >------------------------ESW2----------------------------
+>
 >conf t
+>
 >int range f1/0 - 3
+>
 >no shut
+>
 >end
 
 
 
 
 # paquetes
+> para verificar que los pings estan siendo correctos procedemos a verificar la captura de los paquetes
 > ![](/TOPO1%20P5/paquetes5.png)
