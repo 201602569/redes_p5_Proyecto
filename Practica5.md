@@ -60,7 +60,47 @@
 > ambos switchs se conectan a un ethernet switch que se conecta a dos routers (3-4)
 >
 > luego estos dos routers se conectan al ultimo router de la topologia que va conectado a la nuve.
+>
+>
+## configuracion de etherswitch
 
+>
+> de igualmanera que en la topologia 1
+>
+> ![](/TOPO%202%20P5/eter2.png)
+>
+>
+## Coniguracion de routers
+
+>
+>
+>router 2
+>
+>
+> ![](/TOPO%202%20P5/router2.png)
+>router 3
+>
+>
+> ![](/TOPO%202%20P5/router3.png)
+>router 4
+>
+>
+> ![](/TOPO%202%20P5/router4.png)
+>
+>
+## configuracion de switch
+>
+> se utiliza la misma configuracion que la topo1
+> ![](/TOPO%202%20P5/switch.png)
+>
+>
+## configuracion de clientes
+> se les agrega ip y mascara
+> 
+> ![](/TOPO%202%20P5/cliente1.png)
+>
+> ![](/TOPO%202%20P5/cliente2.png)
+>
 
 # Manual de Comandos
 
